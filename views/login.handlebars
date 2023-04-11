@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>LoginPage</title>
+        <link rel="stylesheet" href="/css/stylelogin.css">
+        <!--<link rel="stylesheet" href="/css/bootstrap.css" />-->
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>Hospital Bed Management and Availability</h1>
+            <nav> 
+                <button class="btn-availability" id="availability" > Check Availability</button>
+            </nav>
+            <div class="card card-container">
+
+                <p id="profile-name" class="profile-name-card">Login</p>
+                <form method="post" action="/login" class="form-signin">
+                    <span id="reauth-email" class="reauth-email"></span>
+                    <label for="username">Username</label>
+                    <input type="text" id="inputEmail" class="form-control" name="username" placeholder="username" required autofocus>
+                    <label for="password">Password</label>
+                    <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                </form><!-- /form -->
+            </div><!-- /card-container -->
+        </div><!-- /container -->
+    </body>
+
+
+    <script type="text/javascript">
+    document.getElementById("availability").onclick = function () {
+        location.href = "http://localhost:3000/availability";
+    };
+    </script>
+</html>
